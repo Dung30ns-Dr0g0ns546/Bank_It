@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-public class Baml implements HasMenu {
+public class Bank implements HasMenu {
 	Admin admin = new Admin();
 	Customerlist customers = new CustomerList();
 	Scanner input = new Scanner(System.in);

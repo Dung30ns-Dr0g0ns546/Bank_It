@@ -1,14 +1,7 @@
-class CheckingAccount implements HasMenu{}
+public class CheckingAccount implements HasMenu{
 
-double balance(){
 
-    CheckingAccount();
-
-    CheckingAccount(double balance){
-
-    }
-
-    String menu(){
+    public String menu(){
         System.out.println("0) Exit");
         System.out.println("1) Check balance");
         System.out.println("2) Make a deposit");
@@ -19,43 +12,27 @@ double balance(){
 
         String result = input.nextLine();
         return result;
-      }
-        
+     
+    }    
 
     public double getBalance(){
-        return this.balance;
+        return this.balance();
     }
 
     string getBalanceString(){
-        String result = String.format(
+        String result = String.format();
     }
 
-    void start(){
-
-    }
-
-    double getBalance(){
-
-    }
-
-    string getBalanceString(){
+    public void start(){
 
     }
 
     public void setBalance(double balance){
     this.balance = balance;
-
-    public void checkBalance()
-    System.out.println("Current balance: " + this.getBalanceString());
     }
 
-    private double getDouble(){
-      Scanner input = new Scanner(System.in);
-      String sResult = input.nextLine();
-      double result = 0d;
-      try {
-        result = Double.parseDouble(sResult);
-      } catch
+    public void checkBalance(){
+    System.out.println("Current balance: " + this.getBalanceString());
     }
 
     public void makeDeposit(){
@@ -65,4 +42,5 @@ double balance(){
     public void makeWithdrawal(){
 
     }    
+
 }
