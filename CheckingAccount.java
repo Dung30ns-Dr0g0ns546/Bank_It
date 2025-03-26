@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class CheckingAccount implements HasMenu{
 
 
@@ -13,19 +15,21 @@ public class CheckingAccount implements HasMenu{
         String result = input.nextLine();
         return result;
      
-    }    
+    }   
+
+      public void start(){
+        
+    }
 
     public double getBalance(){
         return this.balance();
     }
 
-    string getBalanceString(){
+    public String getBalanceString(){
         String result = String.format();
     }
 
-    public void start(){
-
-    }
+    
 
     public void setBalance(double balance){
     this.balance = balance;
