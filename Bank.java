@@ -14,5 +14,6 @@ public class Bank implements HasMenu {
 		this.loadCustomers();
 		this.start();
 		this.saveCustomers();
+		
 	}
 }

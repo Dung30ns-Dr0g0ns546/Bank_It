@@ -29,8 +29,6 @@ public class CheckingAccount implements HasMenu{
         String result = String.format();
     }
 
-    
-
     public void setBalance(double balance){
     this.balance = balance;
     }
