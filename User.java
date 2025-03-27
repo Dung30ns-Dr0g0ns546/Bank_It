@@ -27,8 +27,8 @@ abstract class User implements HasMenu, Serializable{
 
 	}
 
-	public boolean Login(userName, PIN){
-
+	public boolean Login(String userName, String PIN){
+		return true;
 	}
 
 	public void setUserName(String userName){
@@ -47,7 +47,5 @@ abstract class User implements HasMenu, Serializable{
 		return this.PIN();
 	}
     	
-	public abstract string getReport(){
-
-	}
+	public abstract string getReport();
 }	
