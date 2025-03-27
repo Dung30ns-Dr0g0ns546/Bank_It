@@ -25,24 +25,30 @@ public class CheckingAccount implements HasMenu{
         return this.balance();
     }
 
-    public String getBalanceString(){
-        String result = String.format();
+    public string getBalanceString(){
+        String result = String.format("$%f",balance);
+        return result;
     }
 
     public void setBalance(double balance){
-    this.balance = balance;
+        this.balance = balance;
     }
 
     public void checkBalance(){
-    System.out.println("Current balance: " + this.getBalanceString());
+        System.out.println("Current balance: " + this.getBalanceString());
     }
 
     public void makeDeposit(){
-
+        System.out.println("Making a deposit...");
+        System.out.println("How much do you want to deposit?: ");
+        Double depositResult = input.nextDouble();
+        this.balance += depositResult;
     }
 
     public void makeWithdrawal(){
-
+        System.out.println("Making a withdrawal...");
+        System.out.println("How much do you want to withdrawal?: ");
+        Double withdrawalResult = input.nextDouble();
     }    
 
 }
