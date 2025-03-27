@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-public class Admin extends User implements HasMenu , Serializable{
+public abstract class Admin extends User implements HasMenu , Serializable{
 
     public String menu(){
         System.out.println("0) Exit This Menus");
