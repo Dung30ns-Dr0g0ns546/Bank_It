@@ -14,6 +14,13 @@ public class Bank implements HasMenu {
 		this.loadCustomers();
 		this.start();
 		this.saveCustomers();
-		
+		this.reportAllCustomers();
+		this.addUser();
+		this.applyInterest();
+		this.loginAsUser();
+		this.startAdmin();
+		this.loadSampleCustomers();
 	}
+
+	
 }
