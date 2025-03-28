@@ -19,6 +19,24 @@ public class Bank implements HasMenu {
 
 	}
 
+	public void loginAsCustomer(){
+		System.out.print("User Name: ");
+		String userNameIn = input.nextLine();
+		System.out.print("PIN: ");
+		String pinIn = input.nextLine();
+
+		Customer currentCustomer = null;
+		fofr (Customer customer: customers){
+			if (customer.login(userNameIn, pinIn)){
+				currentCustomer = customer;
+			}
+		}
+
+		if (currentCustomer == null){
+			System.out.println();
+		}
+	}
+
 	public void menu(){
 		System.out.println("0) Exit System");
         System.out.println("1) Login as Admin");
