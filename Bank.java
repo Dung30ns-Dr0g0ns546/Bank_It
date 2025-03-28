@@ -19,6 +19,18 @@ public class Bank implements HasMenu {
 
 	}
 
+	public void menu(){
+		System.out.println("0) Exit System");
+        System.out.println("1) Login as Admin");
+        System.out.println("2) Login as Customer");
+
+        System.in.println();
+        System.out.println("Please enter 0-3: ");
+
+        String result = input.nextLine();
+        return result;
+	}
+
 	public void start(){
 		while (keepGoing){
 			String result = menu();
@@ -45,7 +57,7 @@ public class Bank implements HasMenu {
 				System.out.println("Report all users");
 				this.reportAllUsers();
 			} else if (response.equals("2")){
-				
+
 			}
 		}
 	}
