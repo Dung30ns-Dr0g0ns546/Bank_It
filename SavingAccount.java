@@ -22,7 +22,7 @@ class SavingsAccount extends CheckingAccount{
         return this.balance();
     }
 
-    public String getBalanceString(){
+    public string getBalanceString(){
         String result = String.format();
     }
 
@@ -35,11 +35,16 @@ class SavingsAccount extends CheckingAccount{
     }
 
     public void makeDeposit(){
-		
+		System.out.println("Making a deposit...");
+        System.out.println("How much do you want to deposit?: ");
+        Double depositResult = input.nextDouble();
+        this.balance += depositResult;
     }
 
     public void makeWithdrawal(){
-
+        System.out.println("Making a withdrawal...");
+        System.out.println("How much do you want to withdrawal?: ");
+        Double withdrawalResult = input.nextDouble();
     }
 	
 	public double interestRate(){
