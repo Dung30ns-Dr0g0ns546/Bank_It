@@ -18,7 +18,21 @@ public class CheckingAccount implements HasMenu{
     }   
 
       public void start(){
-        
+        boolean keepGoing = true;
+		while (keepGoing){
+			String result = menu();
+			if (result.equals("0")){
+				keepGoing = false;
+			} elseif (result.equals("1"));{
+				getBalanceString();
+			} elseif (result.equals("2"));{
+			makeDeposit();
+		} elseif (result.equals("3"));{
+            makeWithdrawal();
+        } else {
+			System.out.println("Please enter 0-2");
+			}
+		}
     }
 
     public double getBalance(){

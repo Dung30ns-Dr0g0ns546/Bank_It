@@ -19,6 +19,7 @@ public class Bank implements HasMenu {
 
 	}
 
+	
 	public void loginAsCustomer(){
 		System.out.print("User Name: ");
 		String userNameIn = input.nextLine();
@@ -26,7 +27,7 @@ public class Bank implements HasMenu {
 		String pinIn = input.nextLine();
 
 		Customer currentCustomer = null;
-		fofr (Customer customer: customers){
+		for (Customer customer: customers){
 			if (customer.login(userNameIn, pinIn)){
 				currentCustomer = customer;
 			}
@@ -43,13 +44,14 @@ public class Bank implements HasMenu {
         System.out.println("2) Login as Customer");
 
         System.in.println();
-        System.out.println("Please enter 0-3: ");
+        System.out.println("Please enter 0-2: ");
 
         String result = input.nextLine();
         return result;
 	}
 
 	public void start(){
+		boolean keepGoing = true;
 		while (keepGoing){
 			String result = menu();
 			if (result.equals("0")){
@@ -71,11 +73,11 @@ public class Bank implements HasMenu {
 			String response = admin.menu();
 			if (response.equal("0")){
 				keepGoing = false;
-			} elseif(response.equal("1")){
+			} else if(response.equal("1")){
 				System.out.println("Report all users");
 				this.reportAllUsers();
 			} else if (response.equals("2")){
-
+				System.out.println("")
 			}
 		}
 	}
