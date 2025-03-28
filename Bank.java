@@ -19,5 +19,18 @@ public class Bank implements HasMenu {
 
 	}
 
+	public void start(){
+		while (keepGoing){
+			String result = menu();
+			if (result.equals("1")){
+				if (adminMode = true);
+				startAdmin();
+			}
+		} else if (result.equals("2")){
+			loginAsCustomer();
+		} else {
+			System.out.println("Please enter 0-2")
+		}
+	}
 
 }
