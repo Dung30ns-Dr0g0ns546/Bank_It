@@ -23,11 +23,11 @@ public class CheckingAccount implements HasMenu{
 			String result = menu();
 			if (result.equals("0")){
 				keepGoing = false;
-			} elseif (result.equals("1"));{
+			} else if (result.equals("1")){
 				getBalanceString();
-			} elseif (result.equals("2"));{
+			} else if (result.equals("2")){
 			makeDeposit();
-		} elseif (result.equals("3"));{
+		} else if (result.equals("3")){
             makeWithdrawal();
         } else {
 			System.out.println("Please enter 0-2");

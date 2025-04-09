@@ -56,13 +56,13 @@ public class Bank implements HasMenu {
 			String result = menu();
 			if (result.equals("0")){
 				keepGoing = false;
-			} elseif (result.equals("1")){
+			} else if (result.equals("1")){
 				if (adminMode = true);
 				startAdmin();
 			} else if (result.equals("2")){
 			loginAsCustomer();
 		} else {
-			System.out.println("Please enter 0-2")
+			System.out.println("Please enter 0-2");
 			}
 		}
 	}
@@ -77,7 +77,7 @@ public class Bank implements HasMenu {
 				System.out.println("Report all users");
 				this.reportAllUsers();
 			} else if (response.equals("2")){
-				System.out.println("")
+				System.out.println("");
 			}
 		}
 	}
