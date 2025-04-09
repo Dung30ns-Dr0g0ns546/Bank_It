@@ -8,8 +8,8 @@ class Customer extends User{
 	}
 
 	public boolean Customer(){
-		this.userName = 
-		this.pin = 
+		this.userName = "John Doe";
+		this.pin = "1234";
 	}
 
 	public boolean Customer(String usernName, String PIN){
