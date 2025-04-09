@@ -1,18 +1,20 @@
 class Customer extends User{
 	
-	CheckingAccount checking;
-	SavingsAccount savings;
+	CheckingAccount checking = new CheckingAccount();
+	SavingsAccount savings = new SavingAccount();
 
 	public void main(){
 
 	}
 
 	public boolean Customer(){
-
+		this.userName = 
+		this.pin = 
 	}
 
-	public boolean Customer(usernName, PIN){
-
+	public boolean Customer(String usernName, String PIN){
+		this.userName = 
+		this.pin = 
 	}
 
 	public void start(){
@@ -22,15 +24,16 @@ class Customer extends User{
 			if (result.equals("0")){
 				keepGoing = false;
 			} else if (result.equals("1")){
-
+				checking = new CheckingAccount();
 			} else if (result.equals("2")){
-
+				savings = new SavingsAccount();
 			} else if (result.equals("3")){
-
+				changePin();
 			} else {
 				System.out.println("Please enter 0-3");
 			}
 
+		}
 	}
 
 	public string menu(){
@@ -58,5 +61,11 @@ class Customer extends User{
 		}
 	}
 
-	public string getReport();
+	public string getReport(){
+		System.out.println(getUserName());
+		System.out.println(CheckingString());
+		System.out.println(SavingsString());
+
+
+	}
 }	
