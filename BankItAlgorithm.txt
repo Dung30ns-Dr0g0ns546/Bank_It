@@ -1,1 +1,8 @@
 # Algorithm for Bank It
+
+# Admin
+Admin class is extension of User class
+Will have menu, but most functions will be made in Bank class
+
+# Bank
+Bank class will put together 

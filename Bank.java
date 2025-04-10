@@ -3,7 +3,7 @@ import java.io.*;
 
 public class Bank implements HasMenu {
 	Admin admin = new Admin();
-	Customerlist customers = new CustomerList();
+	Arraylist customers = new CustomerList();
 	Scanner input = new Scanner(System.in);
 
 	public static void main(String[] args){
@@ -19,7 +19,38 @@ public class Bank implements HasMenu {
 
 	}
 
-	
+	public void saveCustomers(){
+
+	}
+
+	public void loadCustomers(){
+
+	}
+
+	public void reportAllUsers(){
+
+	}
+
+	public void addUser(){
+
+	}
+
+	public void applyInterest(){
+
+	}
+
+	public String menu(){
+		System.out.println("0) Exit System");
+        System.out.println("1) Login as Admin");
+        System.out.println("2) Login as Customer");
+
+        System.in.println();
+        System.out.println("Please enter 0-2: ");
+
+        String result = input.nextLine();
+        return result;
+	}
+
 	public void loginAsCustomer(){
 		System.out.print("User Name: ");
 		String userNameIn = input.nextLine();
@@ -36,18 +67,6 @@ public class Bank implements HasMenu {
 		if (currentCustomer == null){
 			System.out.println();
 		}
-	}
-
-	public String menu(){
-		System.out.println("0) Exit System");
-        System.out.println("1) Login as Admin");
-        System.out.println("2) Login as Customer");
-
-        System.in.println();
-        System.out.println("Please enter 0-2: ");
-
-        String result = input.nextLine();
-        return result;
 	}
 
 	public void start(){
