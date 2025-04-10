@@ -1,10 +1,12 @@
-import java.util.*;
-import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 public class Bank implements HasMenu {
 	Admin admin = new Admin();
-	Arraylist customers = new CustomerList();
-	Scanner input = new Scanner(System.in);
+
+	private ArrayList<Customer> customers = new Arraylist<>();
+
 
 	public static void main(String[] args){
 		new Bank();
@@ -19,11 +21,15 @@ public class Bank implements HasMenu {
 
 	}
 
-	public void saveCustomers(){
-
+	public void saveCustomers(Customer customer){
+		customers.add(customer);
+        System.out.println("Customer saved: " + customer.getUserName());
 	}
 
 	public void loadCustomers(){
+		customers.add(new Customer("Alice", "1234"));
+		customers.add(new Customer("Bob", "5678"));
+		customers.add(new Customer("Cindy", "2468"));
 
 	}
 
@@ -32,8 +38,26 @@ public class Bank implements HasMenu {
 	}
 
 	public void addUser(){
+		Scanner input = new Scanner(System.in);
 
-	}
+		System.out.print("Enter username: ");
+        String username = input.nextLine();
+        if (customers.contains(username)) {
+            System.out.println("Username already exists.");
+        } else {
+            customers.add(username);
+            System.out.println("User added successfully.");
+        }
+
+		System.out.print("Enter PIN: ");
+        String pin = input.nextLine();
+        if (customers.contains(pin)) {
+            System.out.println("PIN already exists.");
+        } else {
+            customers.add(pin);
+            System.out.println("PIN added successfully.");
+        }
+    }
 
 	public void applyInterest(){
 
@@ -93,10 +117,16 @@ public class Bank implements HasMenu {
 			if (response.equal("0")){
 				keepGoing = false;
 			} else if(response.equal("1")){
-				System.out.println("Report all users");
+				System.out.println("Full Customer Report");
 				this.reportAllUsers();
 			} else if (response.equals("2")){
-				System.out.println("");
+				System.out.println("Add user");
+				this.addUser();
+			} else if (response.equals("3")){
+				System.out.println("Apply Interest");
+				this.applyInterest();
+			} else {
+				System.out.println("Please enter 0-3");
 			}
 		}
 	}
