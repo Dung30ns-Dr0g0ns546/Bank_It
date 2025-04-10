@@ -20,5 +20,9 @@ public abstract class Admin extends User implements HasMenu , Serializable{
         
     }
 
-    public abstract string getReport();
+    public String getReport(){
+        System.out.println(getUserName());
+		System.out.println(CheckingString());
+		System.out.println(SavingsString());
+    }
 }

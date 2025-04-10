@@ -2,14 +2,18 @@ import java.util.Scanner;
 
 public class CheckingAccount implements HasMenu{
 
+    double balance; 
+
 
     public String menu(){
+        Scanner input = new Scanner(System.in);
+
         System.out.println("0) Exit");
         System.out.println("1) Check balance");
         System.out.println("2) Make a deposit");
         System.out.println("3) Make a withdrawal");
 
-        System.in.println();
+        System.out.println();
         System.out.println("Please enter 0-3: ");
 
         String result = input.nextLine();
@@ -36,11 +40,11 @@ public class CheckingAccount implements HasMenu{
     }
 
     public double getBalance(){
-        return this.balance();
+        return this.balance;
     }
 
-    public string getBalanceString(){
-        String result = String.format("$%f",balance);
+    public String getBalanceString(){
+        String result = String.format("$%f", balance);
         return result;
     }
 
@@ -53,6 +57,8 @@ public class CheckingAccount implements HasMenu{
     }
 
     public void makeDeposit(){
+        Scanner input = new Scanner(System.in);
+        
         System.out.println("Making a deposit...");
         System.out.println("How much do you want to deposit?: ");
         Double depositResult = input.nextDouble();
@@ -60,6 +66,8 @@ public class CheckingAccount implements HasMenu{
     }
 
     public void makeWithdrawal(){
+        Scanner input = new Scanner(System.in);
+
         System.out.println("Making a withdrawal...");
         System.out.println("How much do you want to withdrawal?: ");
         Double withdrawalResult = input.nextDouble();

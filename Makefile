@@ -1,4 +1,4 @@
-Customer.class: Customer.java User.class CheckingAccount.class SavingsAccount.class
+Customer.class: Customer.java User.class CheckingAccount.class SavingAccount.class
 	javac -g Customer.java
 
 User.class: User.java HasMenu.class
@@ -7,8 +7,8 @@ User.class: User.java HasMenu.class
 CheckingAccount.class: CheckingAccount.java HasMenu.class
 	javac -g CheckingAccount.java
 
-SavingsAccount.class: SavingsAccount.java CheckingAccount.class
-	javac -g SavingsAccount.java
+SavingAccount.class: SavingAccount.java CheckingAccount.class
+	javac -g SavingAccount.java
 
 HasMenu.class: HasMenu.java
 	javac -g HasMenu.java
@@ -22,8 +22,8 @@ testCustomer: Customer.class
 testChecking: CheckingAccount.class
 	java CheckingAccount
 
-testSavings: SavingsAccount.class
-	java SavingsAccount
+testSavings: SavingAccount.class
+	java SavingAccount
 
 clean:
 	rm *.class

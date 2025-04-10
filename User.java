@@ -1,33 +1,34 @@
+import java.util.Scanner;
+import java.io.Serializable;
+
 abstract class User implements HasMenu, Serializable{
 
 	String userName; 
-	String PIN;
+	String pin;
 
 	public boolean login(){
 		boolean output = false;
 		Scanner input = new Scanner(System.in);
 		System.out.println("Please input username.");
 		String userNameResult = input.nextLine();
-		
-		
 
 		if(userName.equals(userNameResult)){
 			
-			System.out.println("Please input PIN.");
-			String PINResult = input.nextLine();
+			System.out.println("Please input pin.");
+			String pinResult = input.nextLine();
 
-			if(PIN.equals(PINResult)){
+			if(pin.equals(pinResult)){
 				output = true;
 			}else{
-				System.out.println("PIN is not correct");
+				System.out.println("pin is not correct");
 			}
 		}else{
 			System.out.println("Username is not correct");
 		}
-
+		return login();
 	}
 
-	public boolean Login(String userName, String PIN){
+	public boolean Login(String userName, String pin){
 		return true;
 	}
 
@@ -35,17 +36,17 @@ abstract class User implements HasMenu, Serializable{
 		this.userName = userName;
 	}
 
-    public string getUserName(){
-		return this.userName();
+    public String getUserName(){
+		return this.userName;
 	}
     
-	public void setPIN(String PIN){
-		this.PIN = PIN;
+	public void setPin(String pin){
+		this.pin = pin;
 	}
 
-    public string getPIN(){
-		return this.PIN();
+    public String getPin(){
+		return this.pin;
 	}
     	
-	public abstract string getReport();
+	public abstract String getReport();
 }	
