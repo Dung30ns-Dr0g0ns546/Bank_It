@@ -71,11 +71,13 @@ public class Bank implements HasMenu {
 	}
 
 	public String menu(){
+		Scanner input = new Scanner(System.in);
+
 		System.out.println("0) Exit System");
         System.out.println("1) Login as Admin");
         System.out.println("2) Login as Customer");
 
-        System.in.println();
+        System.out.println();
         System.out.println("Please enter 0-2: ");
 
         String result = input.nextLine();
@@ -83,6 +85,8 @@ public class Bank implements HasMenu {
 	}
 
 	public void loginAsCustomer(){
+		Scanner input = new Scanner(System.in);
+
 		System.out.print("User Name: ");
 		String userNameIn = input.nextLine();
 		System.out.print("PIN: ");
