@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Bank implements HasMenu {
 	Admin admin = new Admin();
 
-	private ArrayList<Customer> customers = new Arraylist<>();
+	private ArrayList<Customer> customers = new ArrayList<>();
 
 
 	public static void main(String[] args){
@@ -33,19 +33,25 @@ public class Bank implements HasMenu {
 
 	}
 
-	public void reportAllUsers(){
-
+	public void fullCustomerReport(){
+		if (customers.isEmpty()) {
+            System.out.println("No customers found.");
+        } else {
+            for (Customer customer : customers) {
+                System.out.println(customer);
+            }
+        }
 	}
 
 	public void addUser(){
 		Scanner input = new Scanner(System.in);
 
 		System.out.print("Enter username: ");
-        String username = input.nextLine();
-        if (customers.contains(username)) {
+        String userName = input.nextLine();
+        if (customers.contains(userName)) {
             System.out.println("Username already exists.");
         } else {
-            customers.add(username);
+            customers.add(userName);
             System.out.println("User added successfully.");
         }
 
@@ -60,8 +66,8 @@ public class Bank implements HasMenu {
     }
 
 	public void applyInterest(){
-		double interest = balance * interestRate;
-        balance += interest;
+		double interest = this.balance * this.interestRate;
+        this.balance += interest;
 	}
 
 	public String menu(){
