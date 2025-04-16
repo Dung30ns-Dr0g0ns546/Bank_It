@@ -53,6 +53,7 @@ public class Bank implements HasMenu {
     }
 
 	public void applyInterest(){
+		//For loop that goes through every customer and applys interest to it's savings account 
 		double interest = balance * interestRate;
         balance += interest;
 	}
