@@ -64,10 +64,6 @@ class Customer extends User{
 	}
 
 	public String getReport(){
-		System.out.print(getUserName());
-		System.out.print(checking);
-		System.out.print(savings);
-
-		return getReport();
+        return String.format("UserName: %s\nChecking: %s\nSaving: %s",userName, checking, savings);
 	}
 }	

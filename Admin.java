@@ -22,9 +22,10 @@ public class Admin extends User implements HasMenu , Serializable{
         
     }
 
+
+
+
     public String getReport(){
-        System.out.println(getUserName());
-		System.out.println(CheckingString());
-		System.out.println(SavingsString());
+        return String.format("UserName: %s\nPIN: %s\n",userName,pin);
     }
 }

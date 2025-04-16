@@ -33,7 +33,7 @@ public class Bank implements HasMenu {
 
 	}
 
-	public void reportAllUsers(){
+	public void fullCustomerReport(){
 		if (customers.isEmpty()) {
             System.out.println("No customers found.");
         } else {
@@ -43,31 +43,18 @@ public class Bank implements HasMenu {
         }
 	}
 
-	public void addUser(){
-		Scanner input = new Scanner(System.in);
-
-		System.out.print("Enter username: ");
-        String userName = input.nextLine();
-        if (customers.contains(userName)) {
-            System.out.println("Username already exists.");
-        } else {
-            customers.add(userName);
-            System.out.println("User added successfully.");
-        }
-
-		System.out.print("Enter PIN: ");
-        String pin = input.nextLine();
-        if (customers.contains(pin)) {
-            System.out.println("PIN already exists.");
-        } else {
-            customers.add(pin);
-            System.out.println("PIN added successfully.");
-        }
+	public void addUser(User user){
+		if (user != null) {
+			user.add(user);
+			System.out.println("User " + user.getUserName() + " added successfully.");
+	   } else {
+		   System.out.println("Invalid user data. Cannot add to bank.");
+	   }
     }
 
 	public void applyInterest(){
-		double interest = this.balance * this.interestRate;
-        this.balance += interest;
+		double interest = balance * interestRate;
+        balance += interest;
 	}
 
 	public String menu(){
@@ -125,11 +112,11 @@ public class Bank implements HasMenu {
 		boolean keepGoing = true;
 		while (keepGoing){
 			String response = admin.menu();
-			if (response.equal("0")){
+			if (response.equals("0")){
 				keepGoing = false;
-			} else if(response.equal("1")){
+			} else if(response.equals("1")){
 				System.out.println("Full Customer Report");
-				this.reportAllUsers();
+				this.fullCustomerReport();
 			} else if (response.equals("2")){
 				System.out.println("Add user");
 				this.addUser();
