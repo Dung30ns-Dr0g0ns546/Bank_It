@@ -33,7 +33,7 @@ public class Bank implements HasMenu {
 
 	}
 
-	public void fullCustomerReport(){
+	public void reportAllUsers(){
 		if (customers.isEmpty()) {
             System.out.println("No customers found.");
         } else {
@@ -107,7 +107,7 @@ public class Bank implements HasMenu {
 			if (result.equals("0")){
 				keepGoing = false;
 			} else if (result.equals("1")){
-				if (adminMode = true);
+				if (admin = true);
 				startAdmin();
 			} else if (result.equals("2")){
 			loginAsCustomer();
