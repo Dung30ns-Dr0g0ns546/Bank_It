@@ -60,7 +60,8 @@ public class Bank implements HasMenu {
     }
 
 	public void applyInterest(){
-
+		double interest = balance * interestRate;
+        balance += interest;
 	}
 
 	public String menu(){
