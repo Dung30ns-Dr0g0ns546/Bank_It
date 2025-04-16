@@ -43,9 +43,9 @@ public class Bank implements HasMenu {
         }
 	}
 
-	public void addUser(User user){
-		if (user != null) {
-			user.add(user);
+	public void addUser(){
+		if (customers != null) {
+			customers.add(customers);
 			System.out.println("User " + user.getUserName() + " added successfully.");
 	   } else {
 		   System.out.println("Invalid user data. Cannot add to bank.");
