@@ -47,11 +47,16 @@ Have the "makeWithdrawal" class print two lines - "Making a withdrawal..." and "
 
 # Customer
 class Customer extends User
-Create a constructor class called "Customer", and have it use the variables
+Create two constructor class called "Customer", and have it use the variables "userName" and "pin"
+
 
 
 # HasMenu
 
+
+
 # SavingAccount
+
+
 
 # User
